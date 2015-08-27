@@ -23,6 +23,12 @@ module OmniAuth
         end
       end
 
+      credentials do
+        {
+          "scope": access_token.params["scope"]
+        }
+      end
+
       uid { raw_info['id'].to_s }
 
       info do
